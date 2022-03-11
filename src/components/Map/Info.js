@@ -1,36 +1,90 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-
+import * as React from "react";
+import { Box, Card } from "@mui/material";
+import "./Info.scss";
 
 export default function OutlinedCard() {
   return (
-    <Box sx={{ minWidth: 275, backgroundColor: 'dark',}}>
-      <Card variant="outlined"><React.Fragment>
-    <CardContent>
-      <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-        Word of the Day
-      </Typography>
-      <Typography variant="h5" component="div">
-        benevolent
-      </Typography>
-      <Typography sx={{ mb: 1.5 }} color="text.secondary">
-        adjective
-      </Typography>
-      <Typography variant="body2">
-        well meaning and kindly.
-        <br />
-        {'"a benevolent smile"'}
-      </Typography>
-    </CardContent>
-    <CardActions>
-      <Button size="small">Learn More</Button>
-    </CardActions>
-  </React.Fragment></Card>
+    <Box>
+      <Card className="card">
+        <p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            id="parking"
+            width="21"
+            height="21"
+            viewBox="0 0 21 21"
+          >
+            <g>
+              <path d="M0,0 H21 V21 H0 Z" fill="none"></path>
+              <path
+                d="M14.85 11.37a5.1 5.1 0 0 1-3.31 1H8.79V17H6V4h5.72a4.63 4.63 0 0 1 3.13 1A3.88 3.88 0 0 1 16 8.120000000000001a4 4 0 0 1-1.15 3.25zM12.75 6.7a2.25 2.25 0 0 0-1.47-0.43H8.79v3.82h2.49a2.13 2.13 0 0 0 1.47-0.47c0.38-0.395 0.57-0.935 0.52-1.48a1.77 1.77 0 0 0-0.52-1.44z"
+                fill="hsl(26, 35%, 35%)"
+                stroke="hsl(35, 19%, 100%)"
+                stroke-linejoin="round"
+                stroke-miterlimit="4px"
+                stroke-width="2"
+              ></path>
+              <path
+                d="M14.85 11.37a5.1 5.1 0 0 1-3.31 1H8.79V17H6V4h5.72a4.63 4.63 0 0 1 3.13 1A3.88 3.88 0 0 1 16 8.120000000000001a4 4 0 0 1-1.15 3.25zM12.75 6.7a2.25 2.25 0 0 0-1.47-0.43H8.79v3.82h2.49a2.13 2.13 0 0 0 1.47-0.47c0.38-0.395 0.57-0.935 0.52-1.48a1.77 1.77 0 0 0-0.52-1.44z"
+                fill="hsl(26, 35%, 35%)"
+              ></path>
+            </g>
+          </svg>
+          : Açık Otopark
+        </p>
+        <p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            id="parking-garage"
+            width="21"
+            height="21"
+            viewBox="0 0 21 21"
+          >
+            <g>
+              <path d="M0,0 H21 V21 H0 Z" fill="none"></path>
+              <path
+                d="M13.5 13.14a3.53 3.53 0 0 1-2.29 0.66h-1.9V17h-1.9V8h3.92a3.2 3.2 0 0 1 2.16 0.69 2.69 2.69 0 0 1 0.81 2.15 2.76 2.76 0 0 1-0.8 2.3zM12 9.9a1.56 1.56 0 0 0-1-0.3H9.309999999999999v2.65H11a1.48 1.48 0 0 0 1-0.32 1.31 1.31 0 0 0 0.36-1A1.23 1.23 0 0 0 12 9.9z m5.41-2.69a0.5 0.5 0 0 0-0.24-0.66L10.5 3.45 3.79 6.55a0.501 0.501 0 1 0 0.42 0.91L10.5 4.55l6.29 2.9a0.5 0.5 0 0 0 0.66-0.24h-0.04z"
+                fill="hsl(26, 35%, 35%)"
+                stroke="hsl(35, 19%, 100%)"
+                stroke-linejoin="round"
+                stroke-miterlimit="4px"
+                stroke-width="2"
+              ></path>
+              <path
+                d="M13.5 13.14a3.53 3.53 0 0 1-2.29 0.66h-1.9V17h-1.9V8h3.92a3.2 3.2 0 0 1 2.16 0.69 2.69 2.69 0 0 1 0.81 2.15 2.76 2.76 0 0 1-0.8 2.3zM12 9.9a1.56 1.56 0 0 0-1-0.3H9.309999999999999v2.65H11a1.48 1.48 0 0 0 1-0.32 1.31 1.31 0 0 0 0.36-1A1.23 1.23 0 0 0 12 9.9z m5.41-2.69a0.5 0.5 0 0 0-0.24-0.66L10.5 3.45 3.79 6.55a0.501 0.501 0 1 0 0.42 0.91L10.5 4.55l6.29 2.9a0.5 0.5 0 0 0 0.66-0.24h-0.04z"
+                fill="hsl(26, 35%, 35%)"
+              ></path>
+            </g>
+          </svg>
+          : Kapalı Otopark
+        </p>
+        <p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            id="car"
+            width="21"
+            height="21"
+            viewBox="0 0 21 21"
+          >
+            <g>
+              <path d="M0,0 H21 V21 H0 Z" fill="none"></path>
+              <path
+                d="M16.84 9.852L15.6 8.7l-1.1-2.2a1.05 1.05 0 0 0-0.9-0.5H7.4a1.05 1.05 0 0 0-0.9 0.5L5.4 8.7 4.16 9.852a0.5 0.5 0 0 0-0.16 0.367V14.5a0.5 0.5 0 0 0 0.5 0.5h2c0.2 0 0.5-0.2 0.5-0.4V14h7v0.5c0 0.2 0.2 0.5 0.4 0.5h2.1a0.5 0.5 0 0 0 0.5-0.5V10.219000000000001a0.5 0.5 0 0 0-0.16-0.367zM7.5 7h6l1 2h-8zM8 11.6c0 0.2-0.3 0.4-0.5 0.4H5.4c-0.2 0-0.4-0.3-0.4-0.5V10.4c0.1-0.3 0.3-0.5 0.6-0.4l2 0.4c0.2 0 0.4 0.3 0.4 0.5z m8-0.1c0 0.2-0.2 0.5-0.4 0.5h-2.1c-0.2 0-0.5-0.2-0.5-0.4v-0.7c0-0.2 0.2-0.5 0.4-0.5l2-0.4c0.3-0.1 0.5 0.1 0.6 0.4z"
+                fill="hsl(26, 35%, 35%)"
+                stroke="hsl(35, 19%, 100%)"
+                stroke-linejoin="round"
+                stroke-miterlimit="4px"
+                stroke-width="2"
+              ></path>
+              <path
+                d="M16.84 9.852L15.6 8.7l-1.1-2.2a1.05 1.05 0 0 0-0.9-0.5H7.4a1.05 1.05 0 0 0-0.9 0.5L5.4 8.7 4.16 9.852a0.5 0.5 0 0 0-0.16 0.367V14.5a0.5 0.5 0 0 0 0.5 0.5h2c0.2 0 0.5-0.2 0.5-0.4V14h7v0.5c0 0.2 0.2 0.5 0.4 0.5h2.1a0.5 0.5 0 0 0 0.5-0.5V10.219000000000001a0.5 0.5 0 0 0-0.16-0.367zM7.5 7h6l1 2h-8zM8 11.6c0 0.2-0.3 0.4-0.5 0.4H5.4c-0.2 0-0.4-0.3-0.4-0.5V10.4c0.1-0.3 0.3-0.5 0.6-0.4l2 0.4c0.2 0 0.4 0.3 0.4 0.5z m8-0.1c0 0.2-0.2 0.5-0.4 0.5h-2.1c-0.2 0-0.5-0.2-0.5-0.4v-0.7c0-0.2 0.2-0.5 0.4-0.5l2-0.4c0.3-0.1 0.5 0.1 0.6 0.4z"
+                fill="hsl(26, 35%, 35%)"
+              ></path>
+            </g>
+          </svg>
+          : Taksi/Minibüs Park
+        </p>
+      </Card>
     </Box>
   );
 }
