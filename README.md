@@ -41,6 +41,8 @@ Start the server
 - Mapbox-gl
 - Redux
 - Mui
+- SCSS
+- Reactstrap
 
 ## Authors
 
