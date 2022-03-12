@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
-import mapboxgl from "!mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
-import "./Map.scss"
+import mapboxgl from "mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
+import "./Map.scss";
 
 function Map() {
   mapboxgl.accessToken =
@@ -11,6 +11,7 @@ function Map() {
   const [lng, setLng] = useState(28.84);
   const [lat, setLat] = useState(41.03);
   const [zoom, setZoom] = useState(9);
+
 
   useEffect(() => {
     if (map.current) return; // initialize map only once
@@ -24,10 +25,7 @@ function Map() {
 
   return (
     <div>
-      <div
-        ref={mapContainer}
-        className="map-container"
-      />
+      <div ref={mapContainer} className="map-container" />
     </div>
   );
 }

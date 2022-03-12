@@ -8,7 +8,6 @@ It is a shopping site prepared using React.
 
 ## Screenshots
 
-<<<<<<< HEAD
 ![Screenshot](https://raw.githubusercontent.com/ihsansunman/ispark-map/master/src/images/screenshot.png)
 
 ## Run Locally
