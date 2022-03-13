@@ -14,3 +14,40 @@
     bottom: 0px;
     position: absolute;
 }
+
+.mapboxgl-popup {
+  font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  background-color: #555555bd;
+  border-radius: 6px;
+  color: white;
+  padding: 8px 8px;
+  }
+
+  .mapboxgl-popup-close-button{
+    right: 3px;
+    top: 7px;
+    position: absolute;
+    border: none;
+    border-radius: 50%;
+    background-color: unset;
+    font-size: 28px;
+    color: #f7f7f7;
+  }
+
+  .detail-content>#park-name{
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .detail-content{
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    padding: 3px;
+    margin-right: 7px;
+  }
+
+  .detail-content>div>span{
+    font-size: 11px;
+  }

@@ -4,10 +4,10 @@ import {Provider} from 'react-redux';
 import {createStore} from 'redux';
 import reducer from './context/reducer';
 import initialState from './context/store';
-import './index.scss';
-import App from './components/root/App';
+import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.scss';
 
 ReactDOM.render(
   <React.StrictMode>
