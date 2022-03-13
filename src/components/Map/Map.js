@@ -1,4 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+
 import mapboxgl from "mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
 import "./Map.scss";
 
@@ -12,6 +14,7 @@ function Map() {
   const [lat, setLat] = useState(41.03);
   const [zoom, setZoom] = useState(9);
 
+  const {selectedCounty} = useSelector((state) => state);
 
   useEffect(() => {
     if (map.current) return; // initialize map only once
@@ -22,6 +25,18 @@ function Map() {
       zoom: zoom,
     });
   });
+
+  useEffect(() => {
+    setLng(selectedCounty.lng);
+    setLat(selectedCounty.lat);
+    setZoom(selectedCounty.zoom);
+  }, [selectedCounty])
+
+  useEffect(() => {
+    map.current.center= [lng, lat];
+    map.current.zoom= zoom;
+    
+  },[lng,lat,zoom]);
 
   return (
     <div>

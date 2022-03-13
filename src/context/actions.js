@@ -1,6 +1,6 @@
 
-const SetCounty = (countyId) => {
-   return { type: 'SET_COUNTY', payload: countyId };
+const SetCounty = (countyName) => {
+   return { type: 'SET_COUNTY', payload: countyName };
 }
 
 export {SetCounty};

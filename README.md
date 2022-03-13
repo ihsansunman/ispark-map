@@ -43,7 +43,6 @@ Start the server
 - Redux
 - Mui
 - SCSS
-- Reactstrap
 
 ## Authors
 
