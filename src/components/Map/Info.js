@@ -1,12 +1,10 @@
 import * as React from "react";
-import { Box, Card } from "@mui/material";
 import "./Info.scss";
 
-export default function OutlinedCard() {
+export default function Info() {
   return (
-    <Box>
-      <Card className="card">
-        <p>
+      <div className="info-card">
+        <div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             id="parking"
@@ -31,8 +29,8 @@ export default function OutlinedCard() {
             </g>
           </svg>
           : Açık Otopark
-        </p>
-        <p>
+        </div>
+        <div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             id="parking-garage"
@@ -57,8 +55,8 @@ export default function OutlinedCard() {
             </g>
           </svg>
           : Kapalı Otopark
-        </p>
-        <p>
+        </div>
+        <div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             id="car"
@@ -83,8 +81,7 @@ export default function OutlinedCard() {
             </g>
           </svg>
           : Taksi/Minibüs Park
-        </p>
-      </Card>
-    </Box>
+        </div>
+      </div>
   );
 }

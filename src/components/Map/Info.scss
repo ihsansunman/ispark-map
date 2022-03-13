@@ -1,9 +1,10 @@
-.card{
+.info-card{
     position: fixed !important;
-    width: 175px;
-    height: 125px;
+    background-color: #555555bd;
     right: 0px;
     bottom: 0px;
-    padding: 5px;
+    padding: 7px;
     cursor: default;
+    color: white;
+    border-radius: 6px 0 0 0;
 }

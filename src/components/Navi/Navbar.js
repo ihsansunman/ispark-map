@@ -4,9 +4,7 @@ import logo from "../../images/logo.png";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
-import LoopIcon from "@mui/icons-material/Loop";
 import { SetCounty } from "./../../context/actions";
 import { useDispatch, useSelector } from "react-redux";
 import { Autocomplete, TextField } from "@mui/material";
@@ -18,13 +16,8 @@ const Search = styled("div")(({ theme }) => ({
   "&:hover": {
     backgroundColor: alpha(theme.palette.common.white, 0.25),
   },
-  marginLeft: 0,
-  width: "25ch",
+  width: "55ch",
 }));
-
-const refreshPage = () => {
-  window.location.reload();
-};
 
 export default function SearchAppBar() {
   const { counties } = useSelector((state) => state);
@@ -54,15 +47,6 @@ export default function SearchAppBar() {
               )}
             />
           </Search>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            sx={{ ml: 2 }}
-          >
-            <LoopIcon onClick={refreshPage} />
-          </IconButton>
         </Toolbar>
       </AppBar>
     </Box>

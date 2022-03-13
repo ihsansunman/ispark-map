@@ -1,6 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-
 import mapboxgl from "mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
 import "./Map.scss";
 

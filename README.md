@@ -3,9 +3,6 @@
 
 # ISPARK MAP
 
-It is a shopping site prepared using React.
-
-
 ## Screenshots
 
 ![Screenshot](https://raw.githubusercontent.com/ihsansunman/ispark-map/master/src/images/screenshot.png)
