@@ -24,8 +24,8 @@ function Map() {
     });
 
     map.on("load", () => {
-
-      map.on('click', 'symbols', (e) => {
+      map.on("click", "symbols", (e) => {
+        console.log(e.features[0].geometry.coordinates);
 
         const coordinates = e.features[0].geometry.coordinates.slice();
         const content = `<div class="detail-content">
@@ -34,35 +34,25 @@ function Map() {
         <div><b>Park Tipi:</b><span> ${e.features[0].properties["PARK_TYPE_ID"]}</span></div>
         <div><b>Çalışma Saatleri:</b><span> ${e.features[0].properties["WORKING_TIME"]}</span></div>
         <div><b>İlçe:</b><span> ${e.features[0].properties["COUNTY_NAME"]}</span></div>
+        <a href="https://www.google.com/maps/place/${e.features[0].geometry.coordinates[1]},${e.features[0].geometry.coordinates[0]}" target="_blank"><button class="maps-button">Google Maps'te Aç</button></a>
         </div>
         `;
 
-//         CAPACITY_OF_PARK: 40
-// COUNTY_NAME: "BEYLİKDÜZÜ"
-// LOCATION_NAME: "Gürpınar Yolu Caddes"
-// PARK_NAME: "Gürpınar Yolu Caddesi 1"
-// PARK_TYPE_DESC: "YOL ÜSTÜ"
-// PARK_TYPE_ID: "YOL ÜSTÜ"
-// WORKING_TIME: "08:00-18:00"
-         
         while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-        coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+          coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
         }
-         
-        new mapboxgl.Popup()
-        .setLngLat(coordinates)
-        .setHTML(content)
-        .addTo(map);
-        });
-         
-        map.on('mouseenter', 'symbols', () => {
-        map.getCanvas().style.cursor = 'pointer';
-        });
-         
-        map.on('mouseleave', 'symbols', () => {
-        map.getCanvas().style.cursor = '';
-        });
-        
+
+        new mapboxgl.Popup().setLngLat(coordinates).setHTML(content).addTo(map);
+      });
+
+      map.on("mouseenter", "symbols", () => {
+        map.getCanvas().style.cursor = "pointer";
+      });
+
+      map.on("mouseleave", "symbols", () => {
+        map.getCanvas().style.cursor = "";
+      });
+
       setMap(map);
     });
 
@@ -71,19 +61,16 @@ function Map() {
   }, []);
 
   useEffect(() => {
-    if(selectedCounty !== undefined)
-    {
+    if (selectedCounty !== undefined) {
       setLng(selectedCounty.lng);
       setLat(selectedCounty.lat);
       setZoom(selectedCounty.zoom);
-    }
-    else
-    {
+    } else {
       setLng(28.9109);
       setLat(41.1047);
       setZoom(8.74);
     }
-  // eslint-disable-next-line
+    // eslint-disable-next-line
   }, [selectedCounty]);
 
   useEffect(() => {
@@ -91,7 +78,7 @@ function Map() {
       map.setCenter([lng, lat]);
       map.setZoom(zoom);
     }
-  // eslint-disable-next-line
+    // eslint-disable-next-line
   }, [lng, lat, zoom]);
 
   return (
