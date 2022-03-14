@@ -3,6 +3,10 @@ import "./Info.scss";
 
 export default function Info() {
   return (
+    <div>
+      <div className="footer">
+      <a href="https://www.ibb.istanbul/">❤️İBB</a> <a href="https://www.mapbox.com/">© Mapbox</a> <a href="https://ihsansunman.asnus.com/">by ihsansunman</a>
+      </div>
       <div className="info-card">
         <div>
           <svg
@@ -82,6 +86,7 @@ export default function Info() {
           </svg>
           : Taksi/Minibüs Park
         </div>
+      </div>
       </div>
   );
 }

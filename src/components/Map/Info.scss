@@ -1,10 +1,44 @@
-.info-card{
-    position: fixed !important;
-    background-color: #555555bd;
-    right: 0px;
-    bottom: 0px;
-    padding: 7px;
-    cursor: default;
-    color: white;
-    border-radius: 6px 0 0 0;
+.info-card {
+  position: fixed !important;
+  background-color: #555555bd;
+  right: 0px;
+  bottom: 0px;
+  padding: 7px;
+  cursor: default;
+  color: white;
+  border-radius: 6px 0 0 0;
+}
+
+.footer {
+  position: fixed !important;
+  background-color: #555555bd;
+  left: 0px;
+  bottom: 0px;
+  padding-right: 4px;
+  border-radius: 0 6px 0 0;
+}
+
+.footer {
+    a {
+  color: white;
+  text-decoration: none;
+  font-size: small;
+}
+    a:hover {
+  color: white;
+}
+}
+
+@media screen and (max-width: 600px) {
+    .info-card {
+        position: fixed !important;
+        background-color: #555555bd;
+        right: 0px;
+        bottom: 0px;
+        padding: 4px;
+        cursor: default;
+        color: white;
+        font-size: smaller;
+        border-radius: 6px 0 0 0;
+      }
 }

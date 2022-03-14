@@ -37,7 +37,7 @@ export default function SearchAppBar() {
           </Typography>
           <Search>
             <Autocomplete
-              id="free-solo-demo"
+              id="search-county"
               freeSolo
               options={counties}
               getOptionLabel={(option) => option.countyName}
