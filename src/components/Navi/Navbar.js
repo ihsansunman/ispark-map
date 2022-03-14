@@ -43,7 +43,18 @@ export default function SearchAppBar() {
               getOptionLabel={(option) => option.countyName}
               onChange={(e) => dispatch(SetCounty(e.target.textContent))}
               renderInput={(params) => (
-                <TextField {...params} label="İlçe Ara" />
+                <TextField
+                  {...params}
+                  inputProps={{
+                    ...params.inputProps,
+                    onKeyDown: (e) => {
+                          if (e.key === 'Enter') {
+                            e.stopPropagation();
+                          }
+                    },
+                  }}
+                  label="İlçe Ara"
+                />
               )}
             />
           </Search>

@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import mapboxgl from "mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
+import mapboxgl from "!mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
 import "./Map.scss";
 
 function Map() {
@@ -25,8 +25,6 @@ function Map() {
 
     map.on("load", () => {
       map.on("click", "symbols", (e) => {
-        console.log(e.features[0].geometry.coordinates);
-
         const coordinates = e.features[0].geometry.coordinates.slice();
         const content = `<div class="detail-content">
         <span id="park-name">${e.features[0].properties["PARK_NAME"]}</span>
